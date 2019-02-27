@@ -5,7 +5,7 @@
  * a1 a2 ... an
  * output:
  * số nghiệm của phương trình: count
-*/
+ */
 
 #include <stdio.h>
 #define MAX 100

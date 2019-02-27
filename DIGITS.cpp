@@ -24,7 +24,6 @@ void solution() {
     if(T==N){
         count++;
     }
-    
 }
 
 void TRY(int x) {
