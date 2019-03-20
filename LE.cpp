@@ -17,7 +17,6 @@ void solution() {
     if(T == M){
         count++;
     }
-    
 }
 
 bool check(int v, int k) {

@@ -3,14 +3,9 @@ project(applied_algorithm)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(applied_algorithm
-        ADD.cpp
-        Binary.cpp
-        CKN.cpp
-        DIGITS.cpp
-        hoanvi.cpp
-        LE.cpp
-        NRSSCHEDLIST.cpp
-        SERIAL.cpp
-        SUBSET.cpp
-        sudoku.cpp)
+add_executable(CKN CKN.cpp)
+add_executable(hoanvi hoanvi.cpp)
+add_executable(SERIAL SERIAL.cpp)
+add_executable(SUBSET SUBSET.cpp)
+add_executable(BCA BCA/BCA.cpp)
+add_executable(LE LE.cpp)
