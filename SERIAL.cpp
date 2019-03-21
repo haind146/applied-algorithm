@@ -49,7 +49,7 @@ void TRY() {
     }
 }  
 
-main() {
+int main() {
     scanf("%d", &N);
     index = 0;
     TRY();

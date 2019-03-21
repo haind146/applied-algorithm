@@ -78,12 +78,12 @@ void printSolution() {
 }
 
 main() {
-    genData("TSP-15", 15);
-    // f = 0;
-    // f_min = 100000000;
-    // x[1] = 1;
-    // m[1] = true;
-    // input("TSP.INP");
-    // TRY(2);
-    // printSolution();
+//    genData("TSP-15", 15);
+     f = 0;
+     f_min = 100000000;
+     x[1] = 1;
+     m[1] = true;
+     input("TSP.INP");
+     TRY(2);
+     printSolution();
 }

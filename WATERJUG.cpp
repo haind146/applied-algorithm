@@ -49,14 +49,23 @@ bool genStateEmpty2(State* s) {
     return news->x==c || news->y==c;
 } 
 
-bool genStateFill1(State* s) {
-    if(m[a][s->y]) return false;
+bool genStateEmpty1(State* s) {
+    if(m[0][s->y]) return false;
     State* news = new State;
-    news->x = a; news->y = s->y;news->parent=s;
+    news->x = 0; news->y = s->y;news->parent=s;
     m[news->x][news->y] = true;
     Q.push(news);
     return news->x==c || news->y==c;
-} 
+}
+
+bool genState1to2(State* s) {
+    if(m[0][s->y]) return false;
+    State* news = new State;
+    news->x = 0; news->y = s->y;news->parent=s;
+    m[news->x][news->y] = true;
+    Q.push(news);
+    return news->x==c || news->y==c;
+}
 
 int main() {
     State* s0 = initState();
