@@ -66,7 +66,7 @@ int bSearch(int value) {
             l = mid +1;
         } else
         {
-            r = mid;
+            r = mid - 1;
         }
     }
     return 0;
