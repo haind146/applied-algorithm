@@ -137,16 +137,16 @@ void solution() {
 }
 
 int main() {
-//    scanf("%d", &n);
-//    for (int i=0;i<n; i++) {
+    scanf("%d", &n);
+    for (int i=0;i<n; i++) {
         scanf("%d %d %d", &a, &b, &c);
         if(c % gcd(a,b) == 0){
             solution();
         } else {
             printf("-1\n");
-//            continue;
+            continue;
         }
-//    }
+    }
     return 1;
 
 }

@@ -33,7 +33,7 @@ int partition(int L, int R, int indexPivot) {
 
 void quickSort(int L, int R) {
     if(L<R) {
-        int index = (L+R)/3;
+        int index = (L+R)/2;
         index = partition(L, R, index);
         if(index > L+1) quickSort(L, index-1);
         if(index < R-1) quickSort(index+1, R);
@@ -49,7 +49,7 @@ void heapify(int i, int N) {
     int L = 2*i;
     int R = 2*i+1;
     int max = i;
-    if(L<=n && a[L] > a[i]) max = L;
+    if(L<=N && a[L] > a[max]) max = L;
     if(R<=N && a[R] > a[max]) max = R;
     if(max != i) {
         swap(i,max);
@@ -73,5 +73,6 @@ void heapSort() {
 int main() {
     input();
     quickSort(1,n);
+//    heapSort();
     printResult();
 }
