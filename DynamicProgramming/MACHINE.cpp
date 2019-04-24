@@ -1,48 +1,41 @@
-//
-// Created by haind on 28/03/2019.
-//
+#include<bits/stdc++.h>
+using namespace std;
 
-#include <stdio.h>
+const int N=(int) 3e6;
+const int INF=(int)0x3f3f3f3f;
+int n,L[N+10],R[N+10];
 
-#define MAX 1000000
+inline void Read(int &n){//Tang toc do doc du lieu dau vao so voi ham scanf
+    char c;n=0;
+    do{
+        c=getchar();
+    }while(!isdigit(c));
+    do{
+        n=n*10+c-48;
+        c=getchar();
+    }while(isdigit(c));
+}
+int main(){
+    for(int i=0;i<=N+1;++i){
+        L[i]=R[i]=-INF;
 
-int A[MAX][2];
-int n;
-
-void input() {
-    scanf("%d", &n);
-    for (int i = 0; i < n; ++i) {
-        scanf("%d %d", &A[i][0], &A[i][1]);
     }
-}
+    Read(n);
+    while(n--){
+        int s,t;
+        Read(s);
+        Read(t);
+        L[t]=max(L[t],t-s);
+        R[s]=max(R[s],t-s);
 
-int solve() {
-    int maxProduct = 0;
-    for (int i = 0; i < n-1 ; ++i) {
-        for (int j = i+1; j < n ; ++j) {
-            int sum = 0;
-            if(A[i][1] < A[j][0] || A[i][0] > A[j][1]) {
-                sum = A[i][1] - A[i][0] + A[j][1]-A[j][0];
-            }
-            if (sum > maxProduct) {
-                maxProduct = sum;
-            }
-        }
     }
-    return maxProduct;
-
+    for(int i=1;i<=N;++i)L[i]=max(L[i-1],L[i]);
+    for(int i=N;i>=1;--i)R[i]=max(R[i+1],R[i]);
+    int ans=-INF;
+    for(int i=1;i<=N-1;++i){
+        ans=max(ans,L[i]+R[i+1]);
+    }
+    if(ans==-INF)ans=-1;
+    printf("%d",ans);
+    return 0;
 }
-
-int main() {
-    input();
-    printf("%d", solve());
-}
-
-/*
-5
-8 12
- 6 11
- 3 9
- 2 5
- 1 4
- */

@@ -24,3 +24,8 @@ add_executable(day-con-chung-dai-nhat DynamicProgramming/day-con-chung-dai-nhat.
 add_executable(GOLD DynamicProgramming/GOLD.cpp)
 add_executable(NURSE DynamicProgramming/NURSE.cpp)
 add_executable(MACHINE DynamicProgramming/MACHINE.cpp)
+add_executable(DanhSachLienKetDon DanhSachLienKetDon.c)
+add_executable(ConTro ConTro.c)
+add_executable(LINKEDLIST LINKEDLIST.c)
+add_executable(BinaryTree BinaryTree.c)
+add_executable(CayConTraiEmPhai CayConTraiEmPhai.c)
