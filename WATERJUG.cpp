@@ -19,6 +19,7 @@ State* initState() {
     State* s = new State;
     s->x = 0;
     s->y = 0;
+    s->parent = NULL;
     return s;
 }
 
@@ -108,7 +109,7 @@ void printSolution() {
     } else {
         int count = 0;
         State * result = Q.back();
-        while (result->parent) {
+        while (result->parent != NULL) {
 //            printf("%d %d\n", result->x, result->y);
             result=result->parent;
             count++;
@@ -147,6 +148,4 @@ int main() {
             continue;
         }
     }
-    return 1;
-
 }
